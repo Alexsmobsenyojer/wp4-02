@@ -28,7 +28,7 @@ class Computer
     }
     else
     {
-        return FALSE;
+        throw new Exception("Chyba");
     }
     }
     public function  addCPU (string $MB, string $CPU)
@@ -40,7 +40,7 @@ class Computer
     }
     else
     {
-        return FALSE;
+        throw new Exception("Chyba");
     }
     }
     public function  addRAM  (string $MB, string $RAM)
@@ -52,7 +52,7 @@ class Computer
     }
     else
     {
-        return FALSE;
+        throw new Exception("Chyba");
     }
     }
     public function  connectKeyboard  (string $MB, string $keyboard)
@@ -64,7 +64,7 @@ class Computer
     }
     else
     {
-        return FALSE;
+        throw new Exception("Chyba");
     }
     }
     public function  connectMouse  (string $MB, string $mouse)
@@ -76,7 +76,7 @@ class Computer
     }
     else
     {
-        return FALSE;
+        throw new Exception("Chyba");
     }
     }
     public function  connectGPU (string $MB, string $GPU)
@@ -88,7 +88,7 @@ class Computer
     }
     else
     {
-        return FALSE;
+        throw new Exception("Chyba");
     }
     }
     public function  connectDisplay   (string $GPU, string $display)
@@ -100,7 +100,7 @@ class Computer
     }
     else
     {
-        return FALSE;
+        throw new Exception("Chyba");
     }
     }
     public function  addPowerSupply    (string $case, string $powersupply)
@@ -112,7 +112,7 @@ class Computer
     }
     else
     {
-        return FALSE;
+        throw new Exception("Chyba");
     }
     }
     $myComputer = new Computer("ATX");
