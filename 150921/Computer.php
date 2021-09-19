@@ -31,7 +31,7 @@ class Computer
         throw new Exception("You made a mistake");
     }
     }
-    public function  addCPU (string $MB, string $CPU)
+    public function  addCPU ( string $CPU)
     {
     if(isset($MB))
     {
