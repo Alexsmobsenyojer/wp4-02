@@ -29,7 +29,7 @@ class Computer
     }
     else
     {
-        throw new Exception("You made a mistake 1");
+        throw new Exception("You dont have a Motherboard");
     }
     }
     public function  addCPU (string $CPU)
@@ -41,7 +41,7 @@ class Computer
     }
     else
     {
-        throw new Exception("You made a mistake");
+        throw new Exception("You dont have a CPU");
     }
     }
     public function  addRAM  (string $RAM)
@@ -53,7 +53,7 @@ class Computer
     }
     else
     {
-        throw new Exception("You made a mistake");
+        throw new Exception("You dont have a RAM");
     }
     }
     public function  connectKeyboard  (string $keyboard)
@@ -65,7 +65,7 @@ class Computer
     }
     else
     {
-        throw new Exception("You made a mistake");
+        throw new Exception("You dont have a keyboard");
     }
     }
     public function  connectMouse  (string $mouse)
@@ -77,7 +77,7 @@ class Computer
     }
     else
     {
-        throw new Exception("You made a mistake");
+        throw new Exception("You dont have a mouse");
     }
     }
     public function  connectGPU (string $GPU)
@@ -89,7 +89,7 @@ class Computer
     }
     else
     {
-        throw new Exception("You made a mistake");
+        throw new Exception("You dont have a GPU");
     }
     }
     public function  connectDisplay   (string $display)
@@ -101,7 +101,7 @@ class Computer
     }
     else
     {
-        throw new Exception("You made a mistake");
+        throw new Exception("You dont have a display");
     }
     }
     public function  addPowerSupply  (string $powersupply)
@@ -113,7 +113,7 @@ class Computer
     }
     else
     {
-        throw new Exception("You made a mistake");
+        throw new Exception("You dont have a powersupply");
     }
     }
     
