@@ -14,12 +14,13 @@ class Computer
     private string $powersupply;
     public function __construct(string $case) {
         $this->case = $case;
+        
     }
     public function addMotherBoard(string $MB)
     {
         $this->MB = $MB;
     }
-    public function  mountDrive (string $MB, string $SSD )
+    public function  mountDrive ( string $SSD )
     {
     if(isset($MB))
     {
@@ -28,10 +29,10 @@ class Computer
     }
     else
     {
-        throw new Exception("You made a mistake");
+        throw new Exception("You made a mistake 1");
     }
     }
-    public function  addCPU ( string $CPU)
+    public function  addCPU (string $CPU)
     {
     if(isset($MB))
     {
@@ -43,7 +44,7 @@ class Computer
         throw new Exception("You made a mistake");
     }
     }
-    public function  addRAM  (string $MB, string $RAM)
+    public function  addRAM  (string $RAM)
     {
     if(isset($MB))
     {
@@ -55,7 +56,7 @@ class Computer
         throw new Exception("You made a mistake");
     }
     }
-    public function  connectKeyboard  (string $MB, string $keyboard)
+    public function  connectKeyboard  (string $keyboard)
     {
     if(isset($MB))
     {
@@ -67,7 +68,7 @@ class Computer
         throw new Exception("You made a mistake");
     }
     }
-    public function  connectMouse  (string $MB, string $mouse)
+    public function  connectMouse  (string $mouse)
     {
     if(isset($MB))
     {
@@ -79,11 +80,11 @@ class Computer
         throw new Exception("You made a mistake");
     }
     }
-    public function  connectGPU (string $MB, string $GPU)
+    public function  connectGPU (string $GPU)
     {
     if(isset($MB))
     {
-        $this ->keyboard = $keyboard;
+        $this ->GPU = $GPU;
         return TRUE;
     }
     else
@@ -91,7 +92,7 @@ class Computer
         throw new Exception("You made a mistake");
     }
     }
-    public function  connectDisplay   (string $GPU, string $display)
+    public function  connectDisplay   (string $display)
     {
     if(isset($GPU))
     {
@@ -103,11 +104,11 @@ class Computer
         throw new Exception("You made a mistake");
     }
     }
-    public function  addPowerSupply    (string $case, string $powersupply)
+    public function  addPowerSupply  (string $powersupply)
     {
     if(isset($case))
     {
-        $this -> display = $display;
+        $this -> powersupply = $powersupply;
         return TRUE;
     }
     else
@@ -121,8 +122,10 @@ class Computer
 
 }
 $pc1 = new Computer("ATX");
-    try {
+    try
+     {
         $pc1->addMotherBoard('MSI super socket 949');
+        $pc1->mountDrive('Samsung 516 GB');
         $pc1->addCPU('Intel i5 10800U');
         $pc1->addRAM('Corsair 16 GB dual channel pack');
         $pc1->addKeyboard('Logitech keyboard');
@@ -132,8 +135,10 @@ $pc1 = new Computer("ATX");
         $pc1->addPowerSupply  ('800W');
         
         echo "Computer connected all peripherials successfully!";
-    } catch (\Throwable $th) {
+        } 
+    catch (\Throwable $th) {
         echo "Computer issues:" . $th->getMessage();
-    }
+                          }
+
 
 ?>
