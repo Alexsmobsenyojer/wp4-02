@@ -19,6 +19,7 @@ class Computer
     public function addMotherBoard(string $MB)
     {
         $this->MB = $MB;
+        return TRUE;
     }
     public function  mountDrive ( string $SSD )
     {
@@ -80,7 +81,7 @@ class Computer
         throw new Exception("You dont have a mouse");
     }
     }
-    public function  connectGPU (string $GPU)
+    public function  addGPU (string $GPU)
     {
     if(isset($MB))
     {
@@ -128,8 +129,8 @@ $pc1 = new Computer("ATX");
         $pc1->mountDrive('Samsung 516 GB');
         $pc1->addCPU('Intel i5 10800U');
         $pc1->addRAM('Corsair 16 GB dual channel pack');
-        $pc1->addKeyboard('Logitech keyboard');
-        $pc1->addMouse('Logitech mouse');
+        $pc1->connectKeyboard('Logitech keyboard');
+        $pc1->connectMouse('Logitech mouse');
         $pc1->addGPU ('RTX 3080');
         $pc1->connectDisplay('Samsung');
         $pc1->addPowerSupply  ('800W');
