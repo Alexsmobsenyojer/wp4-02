@@ -23,7 +23,7 @@ class Computer
     }
     public function  mountDrive ( string $SSD )
     {
-    if(isset($MB))
+    if(isset($this->MB))
     {
         $this->SSD = $SSD;
         return TRUE;
@@ -35,7 +35,7 @@ class Computer
     }
     public function  addCPU (string $CPU)
     {
-    if(isset($MB))
+    if(isset($this->MB))
     {
         $this->CPU = $CPU;
         return TRUE;
@@ -47,7 +47,7 @@ class Computer
     }
     public function  addRAM  (string $RAM)
     {
-    if(isset($MB))
+    if(isset($this->MB))
     {
         $this ->RAM = $RAM;
         return TRUE;
@@ -59,7 +59,7 @@ class Computer
     }
     public function  connectKeyboard  (string $keyboard)
     {
-    if(isset($MB))
+    if(isset($this->MB))
     {
         $this ->keyboard = $keyboard;
         return TRUE;
@@ -71,7 +71,7 @@ class Computer
     }
     public function  connectMouse  (string $mouse)
     {
-    if(isset($MB))
+    if(isset($this->MB))
     {
         $this ->mouse = $mouse;
         return TRUE;
@@ -83,7 +83,7 @@ class Computer
     }
     public function  addGPU (string $GPU)
     {
-    if(isset($MB))
+    if(isset($this->MB))
     {
         $this ->GPU = $GPU;
         return TRUE;
@@ -95,7 +95,7 @@ class Computer
     }
     public function  connectDisplay   (string $display)
     {
-    if(isset($GPU))
+    if(isset($this->GPU))
     {
         $this -> display = $display;
         return TRUE;
@@ -107,7 +107,7 @@ class Computer
     }
     public function  addPowerSupply  (string $powersupply)
     {
-    if(isset($case))
+    if(isset($this->case))
     {
         $this -> powersupply = $powersupply;
         return TRUE;
